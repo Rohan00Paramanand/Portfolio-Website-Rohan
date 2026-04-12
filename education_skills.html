@@ -6,7 +6,283 @@
     <title>Education and Skills</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>Education & Skills</h1>
+  <body class="bg-slate-950 text-slate-100">
+    <header
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img
+            src="image.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full object-cover"
+          />
+          <span class="text-lg font-semibold tracking-tight">Portfolio</span>
+        </a>
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a href="index.html" class="text-slate-400 hover:text-slate-100"
+            >Home</a
+          >
+          <a href="about.html" class="text-slate-400 hover:text-slate-100"
+            >About</a
+          >
+          <a href="education_skills.html" class="text-white">Education</a>
+          <a href="projects.html" class="text-slate-400 hover:text-slate-100"
+            >Projects</a
+          >
+          <a href="contact.html" class="text-slate-400 hover:text-slate-100"
+            >Contact</a
+          >
+        </nav>
+        <details class="relative md:hidden">
+          <summary
+            class="flex cursor-pointer items-center justify-between rounded-full border border-slate-800 bg-slate-900 px-4 py-3 text-sm font-medium text-slate-100"
+          >
+            Menu
+          </summary>
+          <div
+            class="mt-2 rounded-3xl border border-slate-800 bg-slate-900 p-4 shadow-xl shadow-black/20"
+          >
+            <a
+              href="index.html"
+              class="block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >About</a
+            >
+            <a
+              href="education_skills.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Education</a
+            >
+            <a
+              href="projects.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Projects</a
+            >
+            <a
+              href="contact.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Contact</a
+            >
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-6 pb-24 pt-12 sm:px-8">
+      <section
+        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20"
+      >
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+        >
+          Education & Skills
+        </p>
+        <h1 class="mt-4 text-4xl font-semibold text-white">
+          Building expertise through learning and practice.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          A foundation in education combined with hands-on skills development.
+          Add your degrees, certifications, and technical competencies here.
+        </p>
+      </section>
+
+      <section class="mt-16 grid gap-8 lg:grid-cols-2">
+        <article
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <h2 class="text-2xl font-semibold text-white">Education</h2>
+          <p class="mt-4 text-slate-300">
+            Academic background and formal training that shaped my approach to
+            problem-solving and professional development.
+          </p>
+          <div class="mt-8 space-y-6">
+            <div class="rounded-2xl bg-slate-950 p-5">
+              <h3 class="text-lg font-semibold text-white">
+                Bachelor's Degree in Computer Science
+              </h3>
+              <p class="mt-1 text-indigo-300">University Name • 2020-2024</p>
+              <p class="mt-3 text-slate-400">
+                Focused on software development, algorithms, and system design.
+                Relevant coursework included web development, database systems,
+                and user experience design.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-slate-950 p-5">
+              <h3 class="text-lg font-semibold text-white">
+                High School Diploma
+              </h3>
+              <p class="mt-1 text-indigo-300">School Name • 2016-2020</p>
+              <p class="mt-3 text-slate-400">
+                Strong foundation in mathematics, science, and computer
+                fundamentals that prepared me for higher education.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <h2 class="text-2xl font-semibold text-white">Certifications</h2>
+          <p class="mt-4 text-slate-300">
+            Professional certifications that demonstrate commitment to
+            continuous learning and industry standards.
+          </p>
+          <div class="mt-8 space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></div>
+              <div>
+                <h3 class="font-semibold text-white">
+                  AWS Certified Developer
+                </h3>
+                <p class="text-slate-400">Amazon Web Services • 2025</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></div>
+              <div>
+                <h3 class="font-semibold text-white">
+                  Google Cloud Professional
+                </h3>
+                <p class="text-slate-400">Google Cloud • 2024</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></div>
+              <div>
+                <h3 class="font-semibold text-white">Responsive Web Design</h3>
+                <p class="text-slate-400">freeCodeCamp • 2023</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="mt-16 rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10"
+      >
+        <h2 class="text-3xl font-semibold text-white">Technical Skills</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <h3 class="text-lg font-semibold text-white">
+              Frontend Development
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >HTML5</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >CSS3</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >JavaScript</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >React</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Tailwind CSS</span
+              >
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">
+              Backend Development
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Node.js</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Python</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Express</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >MongoDB</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >PostgreSQL</span
+              >
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">
+              Tools & Technologies
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Git</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Docker</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >AWS</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >VS Code</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Figma</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="mt-16 rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 text-slate-300"
+      >
+        <h2 class="text-3xl font-semibold text-white">
+          Ready to customize with your background?
+        </h2>
+        <p class="mt-4">
+          Replace these placeholder education details, certifications, and
+          skills with your real qualifications and expertise.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="contact.html"
+            class="rounded-full bg-indigo-500 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-400"
+            >Discuss opportunities</a
+          >
+          <a
+            href="projects.html"
+            class="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-800"
+            >View my work</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
+      <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
+        © 2026 Your Name. Education and skills showcase.
+      </div>
+    </footer>
   </body>
 </html>

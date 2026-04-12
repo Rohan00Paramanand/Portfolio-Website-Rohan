@@ -3,10 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>About Me</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>About Page</h1>
+  <body class="bg-slate-950 text-slate-100">
+    <header
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img
+            src="image.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full object-cover"
+          />
+          <span class="text-lg font-semibold tracking-tight">Portfolio</span>
+        </a>
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a href="index.html" class="text-slate-400 hover:text-slate-100"
+            >Home</a
+          >
+          <a href="about.html" class="text-white">About</a>
+          <a
+            href="education_skills.html"
+            class="text-slate-400 hover:text-slate-100"
+            >Education</a
+          >
+          <a href="projects.html" class="text-slate-400 hover:text-slate-100"
+            >Projects</a
+          >
+          <a href="contact.html" class="text-slate-400 hover:text-slate-100"
+            >Contact</a
+          >
+        </nav>
+        <details class="relative md:hidden">
+          <summary
+            class="flex cursor-pointer items-center justify-between rounded-full border border-slate-800 bg-slate-900 px-4 py-3 text-sm font-medium text-slate-100"
+          >
+            Menu
+          </summary>
+          <div
+            class="mt-2 rounded-3xl border border-slate-800 bg-slate-900 p-4 shadow-xl shadow-black/20"
+          >
+            <a
+              href="index.html"
+              class="block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >About</a
+            >
+            <a
+              href="education_skills.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Education</a
+            >
+            <a
+              href="projects.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Projects</a
+            >
+            <a
+              href="contact.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Contact</a
+            >
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-6 pb-24 pt-12 sm:px-8">
+      <section
+        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20"
+      >
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+        >
+          About me
+        </p>
+        <h1 class="mt-4 text-4xl font-semibold text-white">
+          A creative technologist building polished digital experiences.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          I create modern, user-friendly websites that help people share their
+          story and showcase their work. This site structure is ready for your
+          biography, your background, and your career highlights.
+        </p>
+      </section>
+
+      <section class="mt-16 grid gap-8 lg:grid-cols-2">
+        <article
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <h2 class="text-2xl font-semibold text-white">My approach</h2>
+          <p class="mt-4 text-slate-300">
+            I focus on clarity, speed, and craftsmanship. Every section is
+            designed to make your achievements easy to skim while preserving
+            depth for readers who want to learn more.
+          </p>
+          <ul class="mt-6 space-y-4 text-slate-400">
+            <li class="flex gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>Clear
+              storytelling with structured content
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span
+              >Responsive layouts for desktop and mobile
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span
+              >Fast-loading pages with strong visual hierarchy
+            </li>
+          </ul>
+        </article>
+
+        <article
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <h2 class="text-2xl font-semibold text-white">What I believe</h2>
+          <p class="mt-4 text-slate-300">
+            The best portfolios are personal and practical. They share the story
+            behind the work, highlight the most meaningful results, and make it
+            easy for visitors to reach out.
+          </p>
+          <div class="mt-8 space-y-4">
+            <div class="rounded-2xl bg-slate-950 p-5">
+              <h3 class="text-base font-semibold text-white">
+                Design with purpose
+              </h3>
+              <p class="mt-2 text-slate-400">
+                Simple, thoughtful design helps your ideas stand out without
+                distraction.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-slate-950 p-5">
+              <h3 class="text-base font-semibold text-white">
+                Tell your story
+              </h3>
+              <p class="mt-2 text-slate-400">
+                Your background, process, and outcomes are the most compelling
+                part of your portfolio.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="mt-16 rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10"
+      >
+        <h2 class="text-3xl font-semibold text-white">Experience timeline</h2>
+        <div class="mt-8 space-y-8">
+          <div class="flex gap-6">
+            <div class="mt-1 h-3 w-3 rounded-full bg-indigo-400"></div>
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+              >
+                2025
+              </p>
+              <h3 class="mt-2 text-xl font-semibold text-white">
+                Building responsive web systems
+              </h3>
+              <p class="mt-2 text-slate-400">
+                Delivered user-focused portfolio pages, clean layouts, and fast
+                interactions for modern personal brands.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="mt-1 h-3 w-3 rounded-full bg-indigo-400"></div>
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+              >
+                2024
+              </p>
+              <h3 class="mt-2 text-xl font-semibold text-white">
+                Learning and growth
+              </h3>
+              <p class="mt-2 text-slate-400">
+                Expanded expertise in responsive design, accessible HTML, and
+                modern portfolio structure.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="mt-1 h-3 w-3 rounded-full bg-indigo-400"></div>
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+              >
+                2023
+              </p>
+              <h3 class="mt-2 text-xl font-semibold text-white">
+                Foundational work
+              </h3>
+              <p class="mt-2 text-slate-400">
+                Built the first versions of a professional site to showcase
+                projects, skills, and contact details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
+      <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
+        © 2026 Your Name. Designed for clarity and impact.
+      </div>
+    </footer>
   </body>
 </html>

@@ -3,10 +3,251 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
+    <title>Projects</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>Projects</h1>
+  <body class="bg-slate-950 text-slate-100">
+    <header
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img
+            src="image.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full object-cover"
+          />
+          <span class="text-lg font-semibold tracking-tight">Portfolio</span>
+        </a>
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a href="index.html" class="text-slate-400 hover:text-slate-100"
+            >Home</a
+          >
+          <a href="about.html" class="text-slate-400 hover:text-slate-100"
+            >About</a
+          >
+          <a
+            href="education_skills.html"
+            class="text-slate-400 hover:text-slate-100"
+            >Education</a
+          >
+          <a href="projects.html" class="text-white">Projects</a>
+          <a href="contact.html" class="text-slate-400 hover:text-slate-100"
+            >Contact</a
+          >
+        </nav>
+        <details class="relative md:hidden">
+          <summary
+            class="flex cursor-pointer items-center justify-between rounded-full border border-slate-800 bg-slate-900 px-4 py-3 text-sm font-medium text-slate-100"
+          >
+            Menu
+          </summary>
+          <div
+            class="mt-2 rounded-3xl border border-slate-800 bg-slate-900 p-4 shadow-xl shadow-black/20"
+          >
+            <a
+              href="index.html"
+              class="block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >About</a
+            >
+            <a
+              href="education_skills.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Education</a
+            >
+            <a
+              href="projects.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Projects</a
+            >
+            <a
+              href="contact.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Contact</a
+            >
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-6 pb-24 pt-12 sm:px-8">
+      <section
+        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20"
+      >
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+        >
+          Projects
+        </p>
+        <h1 class="mt-4 text-4xl font-semibold text-white">
+          Featured work and case studies.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          Showcase your best projects with engaging descriptions, technologies
+          used, and outcomes that demonstrate your value.
+        </p>
+      </section>
+
+      <section class="mt-16 grid gap-8 lg:grid-cols-2">
+        <article
+          class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+          >
+            Project
+          </p>
+          <h2 class="mt-4 text-2xl font-semibold text-white">
+            Portfolio Website
+          </h2>
+          <p class="mt-4 text-slate-400">
+            A complete portfolio layout, built with responsive sections, modern
+            typography, and a polished showcase experience.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >HTML</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >CSS</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >Tailwind</span
+            >
+          </div>
+        </article>
+
+        <article
+          class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+          >
+            Project
+          </p>
+          <h2 class="mt-4 text-2xl font-semibold text-white">
+            Interactive case study
+          </h2>
+          <p class="mt-4 text-slate-400">
+            A project page that leads with user goals, walks through challenges,
+            and highlights successful results.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >Research</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >Design</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >Launch</span
+            >
+          </div>
+        </article>
+
+        <article
+          class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+          >
+            Project
+          </p>
+          <h2 class="mt-4 text-2xl font-semibold text-white">
+            Client dashboard
+          </h2>
+          <p class="mt-4 text-slate-400">
+            A clean interface for managing data and delivering insights with a
+            high-quality design system.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >UI</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >UX</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >Analytics</span
+            >
+          </div>
+        </article>
+
+        <article
+          class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+          >
+            Project
+          </p>
+          <h2 class="mt-4 text-2xl font-semibold text-white">Brand refresh</h2>
+          <p class="mt-4 text-slate-400">
+            A visual refresh project that brings a consistent identity across
+            web, social, and marketing assets.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >Branding</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >Strategy</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >Storytelling</span
+            >
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="mt-16 rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 text-slate-300"
+      >
+        <h2 class="text-3xl font-semibold text-white">
+          Ready to add your own case studies?
+        </h2>
+        <p class="mt-4">
+          Replace these placeholder project cards with your real work. Add
+          images, links, and results to make each item more compelling.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="contact.html"
+            class="rounded-full bg-indigo-500 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-400"
+            >Let’s work together</a
+          >
+          <a
+            href="about.html"
+            class="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-800"
+            >About my process</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
+      <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
+        © 2026 Your Name. Project showcase layout completed.
+      </div>
+    </footer>
   </body>
 </html>

@@ -3,209 +3,231 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Porfolio</title>
+    <title>Personal Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <div class="bg-gray-900">
-      <header class="absolute inset-x-0 top-0 z-50">
-        <nav
-          aria-label="Global"
-          class="flex items-center justify-between p-6 lg:px-8"
+  <body class="bg-slate-950 text-slate-100">
+    <header
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img
+            src="image.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full object-cover"
+          />
+          <span class="text-lg font-semibold tracking-tight">Portfolio</span>
+        </a>
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a href="index.html" class="text-slate-200 hover:text-white">Home</a>
+          <a href="about.html" class="text-slate-400 hover:text-slate-100"
+            >About</a
+          >
+          <a
+            href="education_skills.html"
+            class="text-slate-400 hover:text-slate-100"
+            >Education</a
+          >
+          <a href="projects.html" class="text-slate-400 hover:text-slate-100"
+            >Projects</a
+          >
+          <a href="contact.html" class="text-slate-400 hover:text-slate-100"
+            >Contact</a
+          >
+        </nav>
+        <a
+          href="contact.html"
+          class="hidden rounded-full bg-indigo-500 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-400 md:inline-flex"
+          >Get in touch</a
         >
-          <div class="flex lg:flex-1">
-            <a href="new.html" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img src="image.png" alt="" class="h-8 w-auto" />
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button
-              type="button"
-              command="show-modal"
-              commandfor="mobile-menu"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+        <details class="relative md:hidden">
+          <summary
+            class="flex cursor-pointer items-center justify-between rounded-full border border-slate-800 bg-slate-900 px-4 py-3 text-sm font-medium text-slate-100"
+          >
+            Menu
+          </summary>
+          <div
+            class="mt-2 rounded-3xl border border-slate-800 bg-slate-900 p-4 shadow-xl shadow-black/20"
+          >
+            <a
+              href="index.html"
+              class="block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Home</a
             >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                data-slot="icon"
-                aria-hidden="true"
-                class="size-6"
-              >
-                <path
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="about.html" class="text-sm/6 font-semibold text-white"
-              >About Me</a
+            <a
+              href="about.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >About</a
             >
             <a
               href="education_skills.html"
-              class="text-sm/6 font-semibold text-white"
-              >Education & Skills</a
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Education</a
             >
-            <a href="projects.html" class="text-sm/6 font-semibold text-white"
+            <a
+              href="projects.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
               >Projects</a
             >
-            <a href="contact.html" class="text-sm/6 font-semibold text-white"
-              >Contact Information</a
+            <a
+              href="contact.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Contact</a
             >
           </div>
-        </nav>
-        <el-dialog>
-          <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-            <div tabindex="0" class="fixed inset-0 focus:outline-none">
-              <el-dialog-panel
-                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
-              >
-                <div class="flex items-center justify-between">
-                  <a href="new.html" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
-                    <img
-                      src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                      alt=""
-                      class="h-8 w-auto"
-                    />
-                  </a>
-                  <button
-                    type="button"
-                    command="close"
-                    commandfor="mobile-menu"
-                    class="-m-2.5 rounded-md p-2.5 text-gray-200"
-                  >
-                    <span class="sr-only">Close menu</span>
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      data-slot="icon"
-                      aria-hidden="true"
-                      class="size-6"
-                    >
-                      <path
-                        d="M6 18 18 6M6 6l12 12"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div class="mt-6 flow-root">
-                  <div class="-my-6 divide-y divide-white/10">
-                    <div class="space-y-2 py-6">
-                      <a
-                        href="about.html"
-                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                        >About Me</a
-                      >
-                      <a
-                        href="education_skills.html"
-                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                        >Education & Skills</a
-                      >
-                      <a
-                        href="projects.html"
-                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                        >Projects</a
-                      >
-                      <a
-                        href="contact.html"
-                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                        >Contact Information</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </el-dialog-panel>
-            </div>
-          </dialog>
-        </el-dialog>
-      </header>
-
-      <div class="relative isolate px-6 pt-14 lg:px-8">
-        <div
-          aria-hidden="true"
-          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        >
-          <div
-            style="
-              clip-path: polygon(
-                74.1% 44.1%,
-                100% 61.6%,
-                97.5% 26.9%,
-                85.5% 0.1%,
-                80.7% 2%,
-                72.5% 32.5%,
-                60.2% 62.4%,
-                52.4% 68.1%,
-                47.5% 58.3%,
-                45.2% 34.5%,
-                27.5% 76.7%,
-                0.1% 64.9%,
-                17.9% 100%,
-                27.6% 76.8%,
-                76.1% 97.7%,
-                74.1% 44.1%
-              );
-            "
-            class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
-          ></div>
-        </div>
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div class="text-center">
-            <h1
-              class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl"
-            >
-              Personal Portfolio
-            </h1>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="about.html"
-                class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                >Get started</a
-              >
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        >
-          <div
-            style="
-              clip-path: polygon(
-                74.1% 44.1%,
-                100% 61.6%,
-                97.5% 26.9%,
-                85.5% 0.1%,
-                80.7% 2%,
-                72.5% 32.5%,
-                60.2% 62.4%,
-                52.4% 68.1%,
-                47.5% 58.3%,
-                45.2% 34.5%,
-                27.5% 76.7%,
-                0.1% 64.9%,
-                17.9% 100%,
-                27.6% 76.8%,
-                76.1% 97.7%,
-                74.1% 44.1%
-              );
-            "
-            class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
-          ></div>
-        </div>
+        </details>
       </div>
-    </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-6 pb-24 pt-12 sm:px-8">
+      <section class="min-h-[calc(100vh-6rem)] flex flex-col justify-center">
+        <h1
+          class="mt-8 max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl"
+        >
+          Rohan Paramanand
+        </h1>
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+          My portfolio
+        </p>
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <a
+            href="about.html"
+            class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-500/20 hover:bg-indigo-400"
+            >Learn more</a
+          >
+          <a
+            href="projects.html"
+            class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900 px-6 py-3 text-base font-semibold text-slate-200 hover:bg-slate-800"
+            >View projects</a
+          >
+        </div>
+      </section>
+
+      <section class="mt-20 grid gap-6 lg:grid-cols-3">
+        <article
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+          >
+            About
+          </p>
+          <h2 class="mt-4 text-2xl font-semibold text-white">Who I am</h2>
+          <p class="mt-4 text-slate-400">
+            A dedicated creator with a focus on clean design, fast performance,
+            and strong storytelling. This site is structured so your experience
+            is easy to browse.
+          </p>
+        </article>
+
+        <article
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+          >
+            Skills
+          </p>
+          <h2 class="mt-4 text-2xl font-semibold text-white">What I bring</h2>
+          <p class="mt-4 text-slate-400">
+            A strong foundation in modern web development, with room to add your
+            own technical stack and experience details.
+          </p>
+        </article>
+
+        <article
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+          >
+            Projects
+          </p>
+          <h2 class="mt-4 text-2xl font-semibold text-white">Work examples</h2>
+          <p class="mt-4 text-slate-400">
+            A polished project showcase section with cards ready for case
+            studies, product launches, or client work.
+          </p>
+        </article>
+      </section>
+
+      <section
+        class="mt-20 rounded-[2rem] bg-slate-900/90 p-10 shadow-xl shadow-black/25"
+      >
+        <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+            >
+              Featured
+            </p>
+            <h2 class="mt-4 text-3xl font-semibold text-white">
+              Ready to present your best work.
+            </h2>
+            <p class="mt-4 text-slate-300">
+              These sections are built for people who want a strong online
+              presence without starting from scratch. Add your details to launch
+              a complete portfolio quickly.
+            </p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl bg-slate-950 p-6">
+              <p class="text-sm font-semibold text-indigo-300">Modern</p>
+              <p class="mt-3 text-slate-300">
+                Responsive layout, accessible navigation, and clean typography
+                across every page.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-slate-950 p-6">
+              <p class="text-sm font-semibold text-indigo-300">Polished</p>
+              <p class="mt-3 text-slate-300">
+                A refined aesthetic that works for personal brands, freelance
+                portfolios, and resumes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="mt-20 rounded-[2rem] bg-indigo-500/10 p-10 text-slate-100"
+      >
+        <div
+          class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"
+        >
+          <div>
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+            >
+              Let’s connect
+            </p>
+            <h2 class="mt-3 text-3xl font-semibold text-white">
+              Have a project or question?
+            </h2>
+          </div>
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950"
+              >Contact me</a
+            >
+            <a
+              href="projects.html"
+              class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+              >Browse work</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
+      <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
+        © 2026 Your Name. Built with a clean portfolio structure.
+      </div>
+    </footer>
   </body>
 </html>

@@ -6,7 +6,186 @@
     <title>Contact</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>Contact Page</h1>
+  <body class="bg-slate-950 text-slate-100">
+    <header
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img
+            src="image.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full object-cover"
+          />
+          <span class="text-lg font-semibold tracking-tight">Portfolio</span>
+        </a>
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a href="index.html" class="text-slate-400 hover:text-slate-100"
+            >Home</a
+          >
+          <a href="about.html" class="text-slate-400 hover:text-slate-100"
+            >About</a
+          >
+          <a
+            href="education_skills.html"
+            class="text-slate-400 hover:text-slate-100"
+            >Education</a
+          >
+          <a href="projects.html" class="text-slate-400 hover:text-slate-100"
+            >Projects</a
+          >
+          <a href="contact.html" class="text-white">Contact</a>
+        </nav>
+        <details class="relative md:hidden">
+          <summary
+            class="flex cursor-pointer items-center justify-between rounded-full border border-slate-800 bg-slate-900 px-4 py-3 text-sm font-medium text-slate-100"
+          >
+            Menu
+          </summary>
+          <div
+            class="mt-2 rounded-3xl border border-slate-800 bg-slate-900 p-4 shadow-xl shadow-black/20"
+          >
+            <a
+              href="index.html"
+              class="block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >About</a
+            >
+            <a
+              href="education_skills.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Education</a
+            >
+            <a
+              href="projects.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Projects</a
+            >
+            <a
+              href="contact.html"
+              class="mt-2 block rounded-xl px-4 py-3 text-sm text-slate-100 hover:bg-slate-800"
+              >Contact</a
+            >
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-6 pb-24 pt-12 sm:px-8">
+      <section
+        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20"
+      >
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+        >
+          Contact
+        </p>
+        <h1 class="mt-4 text-4xl font-semibold text-white">
+          Let’s build something together.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          Reach out for collaborations, freelance work, or just to say hello.
+          Use the form below or the contact details to connect directly.
+        </p>
+      </section>
+
+      <section class="mt-16 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <div
+          class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10"
+        >
+          <h2 class="text-2xl font-semibold text-white">Send a message</h2>
+          <form action="#" class="mt-8 space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-slate-300"
+                >Name</label
+              >
+              <input
+                type="text"
+                placeholder="Your name"
+                class="mt-3 w-full rounded-3xl border border-slate-800 bg-slate-950 px-4 py-3 text-slate-100 shadow-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300"
+                >Email</label
+              >
+              <input
+                type="email"
+                placeholder="you@example.com"
+                class="mt-3 w-full rounded-3xl border border-slate-800 bg-slate-950 px-4 py-3 text-slate-100 shadow-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300"
+                >Message</label
+              >
+              <textarea
+                rows="5"
+                placeholder="Tell me about your project"
+                class="mt-3 w-full rounded-3xl border border-slate-800 bg-slate-950 px-4 py-3 text-slate-100 shadow-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-400"
+            >
+              Send message
+            </button>
+          </form>
+        </div>
+
+        <div
+          class="space-y-8 rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10"
+        >
+          <div>
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+            >
+              Contact details
+            </p>
+            <h2 class="mt-4 text-2xl font-semibold text-white">
+              Get in touch directly
+            </h2>
+          </div>
+          <div class="space-y-6 text-slate-300">
+            <div>
+              <p class="font-semibold text-white">Email</p>
+              <p class="mt-1">hello@example.com</p>
+            </div>
+            <div>
+              <p class="font-semibold text-white">Phone</p>
+              <p class="mt-1">+1 (555) 123-4567</p>
+            </div>
+            <div>
+              <p class="font-semibold text-white">Location</p>
+              <p class="mt-1">Your city, your country</p>
+            </div>
+          </div>
+          <div class="rounded-3xl bg-slate-950 p-6">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+            >
+              Note
+            </p>
+            <p class="mt-3 text-slate-400">
+              Replace these placeholder values with your real contact
+              information and add a working form action when ready.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
+      <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
+        © 2026 Your Name. Contact page structure complete.
+      </div>
+    </footer>
   </body>
 </html>
