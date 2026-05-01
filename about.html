@@ -5,10 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      .animate-slide-down {
+        animation: slideDown 0.6s ease-out;
+      }
+
+      .animate-scale-in {
+        animation: scaleIn 0.6s ease-out;
+      }
+
+      .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </style>
   </head>
   <body class="bg-slate-950 text-slate-100">
     <header
-      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur animate-slide-down"
     >
       <div
         class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
@@ -79,7 +142,7 @@
 
     <main class="mx-auto max-w-6xl px-6 pb-24 pt-12 sm:px-8">
       <section
-        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20"
+        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20 animate-slide-up"
       >
         <p
           class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
@@ -87,12 +150,16 @@
           About me
         </p>
         <h1 class="mt-4 text-4xl font-semibold text-white">
-          A creative technologist building polished digital experiences.
+          Data-driven developer passionate about AI and modern technologies.
         </h1>
         <p class="mt-6 text-lg leading-8 text-slate-300">
-          I create modern, user-friendly websites that help people share their
-          story and showcase their work. This site structure is ready for your
-          biography, your background, and your career highlights.
+          I'm an AI Systems Associate and Data Science enthusiast currently
+          working at KodeZera on RAG-based AI development. With a strong
+          academic foundation from Amity University (BCA) and Pimpri Chinchwad
+          College of Engineering (MCA), I combine technical expertise with
+          practical problem-solving skills. My journey spans from data analysis
+          and machine learning to full-stack web development, always focused on
+          building solutions that create real impact.
         </p>
       </section>
 
@@ -102,22 +169,24 @@
         >
           <h2 class="text-2xl font-semibold text-white">My approach</h2>
           <p class="mt-4 text-slate-300">
-            I focus on clarity, speed, and craftsmanship. Every section is
-            designed to make your achievements easy to skim while preserving
-            depth for readers who want to learn more.
+            I combine analytical thinking with technical execution. Whether
+            building machine learning pipelines, developing data-driven
+            applications, or implementing AI solutions, I focus on understanding
+            the problem deeply before coding.
           </p>
           <ul class="mt-6 space-y-4 text-slate-400">
             <li class="flex gap-3">
-              <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>Clear
-              storytelling with structured content
+              <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span
+              >Data-first mentality with emphasis on quality and accuracy
             </li>
             <li class="flex gap-3">
               <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span
-              >Responsive layouts for desktop and mobile
+              >Building scalable solutions from prototypes to production
             </li>
             <li class="flex gap-3">
               <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span
-              >Fast-loading pages with strong visual hierarchy
+              >Continuous learning in AI, machine learning, and modern
+              frameworks
             </li>
           </ul>
         </article>
@@ -127,96 +196,81 @@
         >
           <h2 class="text-2xl font-semibold text-white">What I believe</h2>
           <p class="mt-4 text-slate-300">
-            The best portfolios are personal and practical. They share the story
-            behind the work, highlight the most meaningful results, and make it
-            easy for visitors to reach out.
+            Technology should solve real problems. I believe in building
+            intelligent systems that are not only technically sound but also
+            practical and user-friendly. Every project is an opportunity to
+            learn and contribute meaningful value.
           </p>
           <div class="mt-8 space-y-4">
             <div class="rounded-2xl bg-slate-950 p-5">
               <h3 class="text-base font-semibold text-white">
-                Design with purpose
+                Impact over complexity
               </h3>
               <p class="mt-2 text-slate-400">
-                Simple, thoughtful design helps your ideas stand out without
-                distraction.
+                Code should be clean, maintainable, and serve a clear purpose.
+                Complexity is a tool, not a goal.
               </p>
             </div>
             <div class="rounded-2xl bg-slate-950 p-5">
               <h3 class="text-base font-semibold text-white">
-                Tell your story
+                Continuous improvement
               </h3>
               <p class="mt-2 text-slate-400">
-                Your background, process, and outcomes are the most compelling
-                part of your portfolio.
+                Every project teaches something. Embrace feedback, iterate
+                quickly, and always look for ways to enhance your craft.
               </p>
             </div>
           </div>
         </article>
       </section>
 
-      <section
-        class="mt-16 rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10"
-      >
-        <h2 class="text-3xl font-semibold text-white">Experience timeline</h2>
-        <div class="mt-8 space-y-8">
-          <div class="flex gap-6">
-            <div class="mt-1 h-3 w-3 rounded-full bg-indigo-400"></div>
-            <div>
-              <p
-                class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
-              >
-                2025
-              </p>
-              <h3 class="mt-2 text-xl font-semibold text-white">
-                Building responsive web systems
-              </h3>
-              <p class="mt-2 text-slate-400">
-                Delivered user-focused portfolio pages, clean layouts, and fast
-                interactions for modern personal brands.
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-6">
-            <div class="mt-1 h-3 w-3 rounded-full bg-indigo-400"></div>
-            <div>
-              <p
-                class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
-              >
-                2024
-              </p>
-              <h3 class="mt-2 text-xl font-semibold text-white">
-                Learning and growth
-              </h3>
-              <p class="mt-2 text-slate-400">
-                Expanded expertise in responsive design, accessible HTML, and
-                modern portfolio structure.
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-6">
-            <div class="mt-1 h-3 w-3 rounded-full bg-indigo-400"></div>
-            <div>
-              <p
-                class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
-              >
-                2023
-              </p>
-              <h3 class="mt-2 text-xl font-semibold text-white">
-                Foundational work
-              </h3>
-              <p class="mt-2 text-slate-400">
-                Built the first versions of a professional site to showcase
-                projects, skills, and contact details.
-              </p>
-            </div>
+      <h2 class="text-3xl font-semibold text-white">Professional Experience</h2>
+      <div class="mt-8 space-y-8">
+        <div class="flex gap-6">
+          <div class="mt-1 h-3 w-3 rounded-full bg-indigo-400"></div>
+          <div>
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+            >
+              April 2026 - Present
+            </p>
+            <h3 class="mt-2 text-xl font-semibold text-white">
+              AI Systems Associate Intern at KodeZera
+            </h3>
+            <p class="mt-2 text-slate-400">
+              Onboarding into RAG-based AI development environment, contributing
+              to product documentation and UI testing ahead of active
+              development sprint. Conducted structured UI testing to identify
+              usability gaps and contributed to technical documentation of core
+              product features.
+            </p>
           </div>
         </div>
-      </section>
+        <div class="flex gap-6">
+          <div class="mt-1 h-3 w-3 rounded-full bg-indigo-400"></div>
+          <div>
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+            >
+              May - July 2024
+            </p>
+            <h3 class="mt-2 text-xl font-semibold text-white">
+              Data Science / Analyst Intern at Fairdice Technologies
+            </h3>
+            <p class="mt-2 text-slate-400">
+              Processed 1,200-record rural socioeconomic survey dataset using
+              Pandas. Built a two-stage feature selection pipeline achieving
+              80%+ accuracy, then developed a Flask web application enabling
+              non-technical users to get real-time model predictions.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
       <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
-        © 2026 Your Name. Designed for clarity and impact.
+        © 2026 Rohan Paramanand. Passionate about technology and innovation.
       </div>
     </footer>
   </body>

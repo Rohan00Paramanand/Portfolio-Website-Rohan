@@ -5,10 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow:
+            0 0 20px rgba(99, 102, 241, 0.2),
+            0 0 40px rgba(99, 102, 241, 0.1);
+        }
+        50% {
+          box-shadow:
+            0 0 30px rgba(99, 102, 241, 0.4),
+            0 0 60px rgba(99, 102, 241, 0.2);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      .animate-slide-down {
+        animation: slideDown 0.6s ease-out;
+      }
+
+      .animate-scale-in {
+        animation: scaleIn 0.6s ease-out;
+      }
+
+      .animate-glow {
+        animation: glow 3s ease-in-out infinite;
+      }
+
+      .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(99, 102, 241, 0.1) 0%,
+          rgba(139, 92, 246, 0.05) 100%
+        );
+      }
+    </style>
   </head>
   <body class="bg-slate-950 text-slate-100">
     <header
-      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur animate-slide-down"
     >
       <div
         class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
@@ -83,24 +172,34 @@
     </header>
 
     <main class="mx-auto max-w-7xl px-6 pb-24 pt-12 sm:px-8">
-      <section class="min-h-[calc(100vh-6rem)] flex flex-col justify-center">
+      <section
+        class="min-h-[calc(100vh-6rem)] flex flex-col justify-center hero-gradient rounded-3xl px-8 py-16"
+      >
         <h1
-          class="mt-8 max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl"
+          class="mt-8 max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl animate-slide-up"
         >
           Rohan Paramanand
         </h1>
-        <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-          My portfolio
+        <p
+          class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 animate-slide-up"
+          style="animation-delay: 0.2s"
+        >
+          AI Systems Associate with expertise in data science, full-stack
+          development, and machine learning. Currently working at KodeZera on
+          RAG-based AI solutions.
         </p>
-        <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <div
+          class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center animate-slide-up"
+          style="animation-delay: 0.4s"
+        >
           <a
             href="about.html"
-            class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-500/20 hover:bg-indigo-400"
+            class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-500/20 hover:bg-indigo-400 transition-smooth hover:scale-105 hover:shadow-indigo-500/40"
             >Learn more</a
           >
           <a
             href="projects.html"
-            class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900 px-6 py-3 text-base font-semibold text-slate-200 hover:bg-slate-800"
+            class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900 px-6 py-3 text-base font-semibold text-slate-200 hover:bg-slate-800 transition-smooth hover:scale-105 hover:border-slate-600"
             >View projects</a
           >
         </div>
@@ -108,54 +207,58 @@
 
       <section class="mt-20 grid gap-6 lg:grid-cols-3">
         <article
-          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8 animate-scale-in transition-smooth hover:border-indigo-500/50 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-500/20"
         >
           <p
             class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
           >
-            About
+            Background
           </p>
           <h2 class="mt-4 text-2xl font-semibold text-white">Who I am</h2>
           <p class="mt-4 text-slate-400">
-            A dedicated creator with a focus on clean design, fast performance,
-            and strong storytelling. This site is structured so your experience
-            is easy to browse.
+            MCA student passionate about AI and data science. I combine
+            theoretical knowledge with practical problem-solving, building
+            solutions that leverage modern technologies and machine learning.
           </p>
         </article>
 
         <article
-          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8 animate-scale-in transition-smooth hover:border-indigo-500/50 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-500/20"
+          style="animation-delay: 0.1s"
         >
           <p
             class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
           >
-            Skills
+            Expertise
           </p>
           <h2 class="mt-4 text-2xl font-semibold text-white">What I bring</h2>
           <p class="mt-4 text-slate-400">
-            A strong foundation in modern web development, with room to add your
-            own technical stack and experience details.
+            Python, Java, Django, Flask, React, machine learning, data analysis
+            with Pandas and NumPy, and full-stack web development. Always
+            learning and adapting to new technologies.
           </p>
         </article>
 
         <article
-          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8"
+          class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8 animate-scale-in transition-smooth hover:border-indigo-500/50 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-500/20"
+          style="animation-delay: 0.2s"
         >
           <p
             class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
           >
-            Projects
+            Portfolio
           </p>
           <h2 class="mt-4 text-2xl font-semibold text-white">Work examples</h2>
           <p class="mt-4 text-slate-400">
-            A polished project showcase section with cards ready for case
-            studies, product launches, or client work.
+            Full-stack applications, data analysis projects, and AI-driven
+            solutions. From web scanning tools to astronomical calculations,
+            showcasing diverse technical capabilities.
           </p>
         </article>
       </section>
 
       <section
-        class="mt-20 rounded-[2rem] bg-slate-900/90 p-10 shadow-xl shadow-black/25"
+        class="mt-20 rounded-[2rem] bg-slate-900/90 p-10 shadow-xl shadow-black/25 animate-slide-up"
       >
         <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
@@ -174,14 +277,18 @@
             </p>
           </div>
           <div class="grid gap-4 sm:grid-cols-2">
-            <div class="rounded-3xl bg-slate-950 p-6">
+            <div
+              class="rounded-3xl bg-slate-950 p-6 transition-smooth hover:bg-slate-900 hover:border hover:border-indigo-500/30"
+            >
               <p class="text-sm font-semibold text-indigo-300">Modern</p>
               <p class="mt-3 text-slate-300">
                 Responsive layout, accessible navigation, and clean typography
                 across every page.
               </p>
             </div>
-            <div class="rounded-3xl bg-slate-950 p-6">
+            <div
+              class="rounded-3xl bg-slate-950 p-6 transition-smooth hover:bg-slate-900 hover:border hover:border-indigo-500/30"
+            >
               <p class="text-sm font-semibold text-indigo-300">Polished</p>
               <p class="mt-3 text-slate-300">
                 A refined aesthetic that works for personal brands, freelance
@@ -193,7 +300,7 @@
       </section>
 
       <section
-        class="mt-20 rounded-[2rem] bg-indigo-500/10 p-10 text-slate-100"
+        class="mt-20 rounded-[2rem] bg-indigo-500/10 p-10 text-slate-100 animate-slide-up"
       >
         <div
           class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"
@@ -211,12 +318,12 @@
           <div class="flex flex-col gap-4 sm:flex-row">
             <a
               href="contact.html"
-              class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950"
+              class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition-smooth hover:scale-105 hover:shadow-lg hover:shadow-white/20"
               >Contact me</a
             >
             <a
               href="projects.html"
-              class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+              class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-smooth hover:scale-105"
               >Browse work</a
             >
           </div>
@@ -226,7 +333,7 @@
 
     <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
       <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
-        © 2026 Your Name. Built with a clean portfolio structure.
+        © 2026 Rohan Paramanand. Building intelligent solutions.
       </div>
     </footer>
   </body>

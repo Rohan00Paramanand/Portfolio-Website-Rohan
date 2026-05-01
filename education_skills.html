@@ -5,10 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Education and Skills</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      .animate-slide-down {
+        animation: slideDown 0.6s ease-out;
+      }
+
+      .animate-scale-in {
+        animation: scaleIn 0.6s ease-out;
+      }
+
+      .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </style>
   </head>
   <body class="bg-slate-950 text-slate-100">
     <header
-      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur animate-slide-down"
     >
       <div
         class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
@@ -77,7 +140,7 @@
 
     <main class="mx-auto max-w-7xl px-6 pb-24 pt-12 sm:px-8">
       <section
-        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20"
+        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20 animate-slide-up"
       >
         <p
           class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
@@ -105,23 +168,46 @@
           <div class="mt-8 space-y-6">
             <div class="rounded-2xl bg-slate-950 p-5">
               <h3 class="text-lg font-semibold text-white">
-                Bachelor's Degree in Computer Science
+                Master of Computer Applications (MCA)
               </h3>
-              <p class="mt-1 text-indigo-300">University Name • 2020-2024</p>
+              <p class="mt-1 text-indigo-300">
+                Pimpri Chinchwad College of Engineering • 2025-27
+              </p>
               <p class="mt-3 text-slate-400">
-                Focused on software development, algorithms, and system design.
-                Relevant coursework included web development, database systems,
-                and user experience design.
+                SGPA: 9.1 | Specialized in advanced computer science concepts,
+                data structures, algorithms, and software architecture.
               </p>
             </div>
             <div class="rounded-2xl bg-slate-950 p-5">
               <h3 class="text-lg font-semibold text-white">
-                High School Diploma
+                Bachelor of Computer Applications (BCA)
               </h3>
-              <p class="mt-1 text-indigo-300">School Name • 2016-2020</p>
+              <p class="mt-1 text-indigo-300">
+                Amity University, Noida • 2022-25
+              </p>
               <p class="mt-3 text-slate-400">
-                Strong foundation in mathematics, science, and computer
-                fundamentals that prepared me for higher education.
+                CGPA: 8.19 | Strong foundation in programming, databases, web
+                development, and computer fundamentals.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-slate-950 p-5">
+              <h3 class="text-lg font-semibold text-white">
+                12th Grade (Senior Secondary)
+              </h3>
+              <p class="mt-1 text-indigo-300">Mayoor School, Noida • 2022</p>
+              <p class="mt-3 text-slate-400">
+                Percentage: 85% | Focused on mathematics, physics, and
+                chemistry.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-slate-950 p-5">
+              <h3 class="text-lg font-semibold text-white">
+                10th Grade (Secondary)
+              </h3>
+              <p class="mt-1 text-indigo-300">Mayoor School, Noida • 2020</p>
+              <p class="mt-3 text-slate-400">
+                Percentage: 93% | Strong academic performance across all
+                subjects.
               </p>
             </div>
           </div>
@@ -139,26 +225,19 @@
             <div class="flex items-start gap-4">
               <div class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></div>
               <div>
-                <h3 class="font-semibold text-white">
-                  AWS Certified Developer
-                </h3>
-                <p class="text-slate-400">Amazon Web Services • 2025</p>
+                <h3 class="font-semibold text-white">Google Data Analytics</h3>
+                <p class="text-slate-400">Google - Coursera</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
               <div class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></div>
               <div>
                 <h3 class="font-semibold text-white">
-                  Google Cloud Professional
+                  Supervised Machine Learning: Regression and Classification
                 </h3>
-                <p class="text-slate-400">Google Cloud • 2024</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></div>
-              <div>
-                <h3 class="font-semibold text-white">Responsive Web Design</h3>
-                <p class="text-slate-400">freeCodeCamp • 2023</p>
+                <p class="text-slate-400">
+                  DeepLearning.AI, Stanford University - Coursera
+                </p>
               </div>
             </div>
           </div>
@@ -171,21 +250,34 @@
         <h2 class="text-3xl font-semibold text-white">Technical Skills</h2>
         <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div>
+            <h3 class="text-lg font-semibold text-white">Programming</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Python</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Java</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >SQL</span
+              >
+            </div>
+          </div>
+          <div>
             <h3 class="text-lg font-semibold text-white">
-              Frontend Development
+              Frameworks & Libraries
             </h3>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >HTML5</span
+                >Django</span
               >
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >CSS3</span
-              >
-              <span
-                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >JavaScript</span
+                >Flask</span
               >
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
@@ -193,41 +285,43 @@
               >
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >Tailwind CSS</span
+                >Pandas</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >NumPy</span
+              >
+              <span
+                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                >Django REST Framework</span
               >
             </div>
           </div>
           <div>
             <h3 class="text-lg font-semibold text-white">
-              Backend Development
+              Data Analysis & Tools
             </h3>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >Node.js</span
+                >Tableau</span
               >
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >Python</span
+                >Power BI</span
               >
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >Express</span
+                >Excel</span
               >
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >MongoDB</span
-              >
-              <span
-                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >PostgreSQL</span
+                >Scikit-learn</span
               >
             </div>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-white">
-              Tools & Technologies
-            </h3>
+            <h3 class="text-lg font-semibold text-white">Tools & Platforms</h3>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
@@ -235,19 +329,11 @@
               >
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >Docker</span
-              >
-              <span
-                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >AWS</span
+                >Linux</span
               >
               <span
                 class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
                 >VS Code</span
-              >
-              <span
-                class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-                >Figma</span
               >
             </div>
           </div>
@@ -281,7 +367,7 @@
 
     <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
       <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
-        © 2026 Your Name. Education and skills showcase.
+        © 2026 Rohan Paramanand. Education and skills showcase.
       </div>
     </footer>
   </body>

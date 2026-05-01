@@ -5,10 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      .animate-slide-down {
+        animation: slideDown 0.6s ease-out;
+      }
+
+      .animate-scale-in {
+        animation: scaleIn 0.6s ease-out;
+      }
+
+      .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </style>
   </head>
   <body class="bg-slate-950 text-slate-100">
     <header
-      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur"
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur animate-slide-down"
     >
       <div
         class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8"
@@ -79,7 +142,7 @@
 
     <main class="mx-auto max-w-7xl px-6 pb-24 pt-12 sm:px-8">
       <section
-        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20"
+        class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-10 shadow-xl shadow-black/20 animate-slide-up"
       >
         <p
           class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
@@ -102,29 +165,41 @@
           <p
             class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
           >
-            Project
+            Full-stack application
           </p>
           <h2 class="mt-4 text-2xl font-semibold text-white">
-            Portfolio Website
+            Website Scanner
           </h2>
           <p class="mt-4 text-slate-400">
-            A complete portfolio layout, built with responsive sections, modern
-            typography, and a polished showcase experience.
+            A web application to scan websites and identify third-party scripts
+            using a headless browser. Built with Django REST Framework and
+            React, featuring asynchronous processing for efficient multi-site
+            scanning and interactive visualization of results.
           </p>
           <div class="mt-6 flex flex-wrap gap-2">
             <span
               class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >HTML</span
+              >Django REST</span
             >
             <span
               class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >CSS</span
+              >React</span
             >
             <span
               class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >Tailwind</span
+              >Python</span
+            >
+            <span
+              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+              >APIs</span
             >
           </div>
+          <a
+            href="https://github.com/Rohan00Paramanand/Website-Scanner"
+            class="mt-6 inline-flex items-center text-indigo-400 hover:text-indigo-300"
+          >
+            View on GitHub →
+          </a>
         </article>
 
         <article
@@ -133,89 +208,37 @@
           <p
             class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
           >
-            Project
+            Educational application
           </p>
           <h2 class="mt-4 text-2xl font-semibold text-white">
-            Interactive case study
+            Instruments in Observational Astronomy
           </h2>
           <p class="mt-4 text-slate-400">
-            A project page that leads with user goals, walks through challenges,
-            and highlights successful results.
+            A Django web application to reconstruct classical Indian
+            astronomical instruments using coordinate-based calculations.
+            Features dynamic backend logic for instrument dimension computation
+            and interactive visual representations for educational exploration.
           </p>
           <div class="mt-6 flex flex-wrap gap-2">
             <span
               class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >Research</span
+              >Django</span
             >
             <span
               class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >Design</span
+              >Python</span
             >
             <span
               class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >Launch</span
+              >Visualization</span
             >
           </div>
-        </article>
-
-        <article
-          class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8"
-        >
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
+          <a
+            href="https://github.com/Rohan00Paramanand/Instruments-in-Observational-Astronomy"
+            class="mt-6 inline-flex items-center text-indigo-400 hover:text-indigo-300"
           >
-            Project
-          </p>
-          <h2 class="mt-4 text-2xl font-semibold text-white">
-            Client dashboard
-          </h2>
-          <p class="mt-4 text-slate-400">
-            A clean interface for managing data and delivering insights with a
-            high-quality design system.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span
-              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >UI</span
-            >
-            <span
-              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >UX</span
-            >
-            <span
-              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >Analytics</span
-            >
-          </div>
-        </article>
-
-        <article
-          class="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8"
-        >
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
-          >
-            Project
-          </p>
-          <h2 class="mt-4 text-2xl font-semibold text-white">Brand refresh</h2>
-          <p class="mt-4 text-slate-400">
-            A visual refresh project that brings a consistent identity across
-            web, social, and marketing assets.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span
-              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >Branding</span
-            >
-            <span
-              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >Strategy</span
-            >
-            <span
-              class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
-              >Storytelling</span
-            >
-          </div>
+            View on GitHub →
+          </a>
         </article>
       </section>
 
@@ -246,7 +269,7 @@
 
     <footer class="border-t border-slate-800 bg-slate-950/95 py-8">
       <div class="mx-auto max-w-7xl px-6 text-sm text-slate-500 sm:px-8">
-        © 2026 Your Name. Project showcase layout completed.
+        © 2026 Rohan Paramanand. Project showcase.
       </div>
     </footer>
   </body>
